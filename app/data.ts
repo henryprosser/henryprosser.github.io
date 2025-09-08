@@ -15,6 +15,15 @@ type WorkExperience = {
   id: string
 }
 
+type Education = {
+  degree: string
+  university: string
+  start: string
+  end: string
+  link: string
+  id: string
+}
+
 type BlogPost = {
   title: string
   description: string
@@ -64,13 +73,24 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     link: 'https://ibelick.com',
     id: 'work2',
   },
+]
+
+export const EDUCATION: Education[] = [
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
+    degree: 'MSc Computer Science - Distinction',
+    university: 'University of Bath',
+    start: '2021',
+    end: '2022',
+    link: 'https://www.bath.ac.uk/',
+    id: 'edu1',
+  },
+  {
+    degree: 'BEng Engineering Mathematics - 2:1',
+    university: 'University of Bristol',
     start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work3',
+    end: '2020',
+    link: 'https://www.bristol.ac.uk/',
+    id: 'edu2',
   },
 ]
 
