@@ -42,7 +42,8 @@ export const PROJECTS: Project[] = [
     description:
       'AI recipe generator that turns ingredients into bespoke step-by-step recipes.',
     link: 'https://chef-claude-eight.vercel.app/',
-    video: '/chef-claude.mp4',
+    video:
+      'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412757/chef-claude_y78ata.mp4',
     id: 'project1',
   },
   {
@@ -50,7 +51,8 @@ export const PROJECTS: Project[] = [
     description:
       'A fast dice game where players roll dice until all ten show the same face.',
     link: 'https://tenzies-game-nine-mu.vercel.app/',
-    video: '/tenzies.mp4',
+    video:
+      'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412756/tenzies_ur5pgc.mp4',
     id: 'project2',
   },
   {
@@ -58,7 +60,8 @@ export const PROJECTS: Project[] = [
     description:
       'A Hangman-style game where players attempt to guess a secret word.',
     link: 'https://assembly-endgame-hangman-nine.vercel.app/',
-    video: '/ae.mp4',
+    video:
+      'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412755/ae_sgnhtl.mp4',
     id: 'project3',
   },
   {
@@ -66,7 +69,8 @@ export const PROJECTS: Project[] = [
     description:
       'A modern web app for documenting and sharing travel experiences.',
     link: 'https://travel-journal-nine-xi.vercel.app/',
-    video: '/tj.mp4',
+    video:
+      'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412759/tj_jd0zqz.mp4',
     id: 'project4',
   },
 ]
