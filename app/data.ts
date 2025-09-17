@@ -77,19 +77,19 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    company: 'GSA Global',
+    title: 'Technical & Business Support',
+    start: 'Mar 2021',
+    end: 'Present',
+    link: 'https://www.gsaglobal.com',
+    id: 'work1',
+  },
+  {
     company: 'Brokit',
     title: 'Software Developer (Intern)',
     start: 'Jul 2024',
     end: 'Dec 2024',
     link: 'https://www.brokit.co.uk',
-    id: 'work1',
-  },
-  {
-    company: 'GSA Global',
-    title: 'Technical & Business Support',
-    start: 'Mar 2021',
-    end: 'Dec 2024',
-    link: 'https://www.gsaglobal.com',
     id: 'work2',
   },
   {
