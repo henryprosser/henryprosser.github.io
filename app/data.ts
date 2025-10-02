@@ -78,8 +78,8 @@ export const PROJECTS: Project[] = [
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'GSA Global',
-    title: 'Technical & Business Support',
-    start: 'Mar 2021',
+    title: 'Technical Support Executive',
+    start: 'Jul 2024',
     end: 'Present',
     link: 'https://www.gsaglobal.com',
     id: 'work1',
@@ -93,12 +93,20 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work2',
   },
   {
+    company: 'Global Secure Accreditation',
+    title: 'Business Support Executive',
+    start: 'Mar 2021',
+    end: 'Jan 2024',
+    link: 'https://www.gsaglobal.com',
+    id: 'work3',
+  },
+  {
     company: 'Knibbs',
     title: 'Web Design Assistant',
-    start: 'Apr 2017',
-    end: 'May 2017',
+    start: 'Mar 2017',
+    end: 'Apr 2017',
     link: 'https://knibbs.co.uk',
-    id: 'work3',
+    id: 'work4',
   },
 ]
 
