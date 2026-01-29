@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
+import { XIcon, ArrowUpRight } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -91,6 +91,18 @@ function ProjectVideo({ src }: ProjectVideoProps) {
   )
 }
 
+function ProjectCard({ src, className }: { src: string; className?: string }) {
+  return (
+    <div className={`relative overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 ${className}`}>
+      <img
+        src={src}
+        alt="Project Preview"
+        className="h-full w-full object-cover object-top"
+      />
+    </div>
+  )
+}
+
 function MagneticTechnology({
   icon,
   name,
@@ -174,21 +186,31 @@ export default function Personal() {
         <div className="grid grid-cols-1 gap-x-6 gap-y-15 sm:grid-cols-2">
           {WEBSITE_DESIGN.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
-              </div>
-              <div className="px-1">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block cursor-pointer"
+              >
+                <ProjectCard
+                  src={project.image || ''}
+                  className="aspect-video"
+                />
+              </a>
+              <div className="flex items-center justify-between px-1">
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="group flex items-center gap-2 text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
                   href={project.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
+                  <ArrowUpRight
+                    size={16}
+                    strokeWidth={1.5}
+                    className="text-zinc-500 transition-colors group-hover:text-zinc-900 dark:group-hover:text-zinc-200"
+                  />
                 </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
               </div>
             </div>
           ))}
@@ -587,7 +609,7 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+                {project.video && <ProjectVideo src={project.video} />}
               </div>
               <div className="px-1">
                 <a
