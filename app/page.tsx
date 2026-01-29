@@ -183,7 +183,7 @@ export default function Personal() {
         className="scroll-mt-24"
       >
         <h3 className="mb-5 text-lg font-medium">Web Design</h3>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-15 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-15">
           {WEBSITE_DESIGN.map((project) => (
             <div key={project.name} className="space-y-2">
               <a
