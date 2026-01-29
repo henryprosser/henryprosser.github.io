@@ -14,6 +14,7 @@ import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
+  WEBSITE_DESIGN,
   WORK_EXPERIENCE,
   EDUCATION,
   // BLOG_POSTS,
@@ -166,10 +167,12 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id="design"
+        className="scroll-mt-24"
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <h3 className="mb-5 text-lg font-medium">Web Design</h3>
         <div className="grid grid-cols-1 gap-x-6 gap-y-15 sm:grid-cols-2">
-          {PROJECTS.map((project) => (
+          {WEBSITE_DESIGN.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 <ProjectVideo src={project.video} />
@@ -192,9 +195,13 @@ export default function Personal() {
         </div>
       </motion.section>
 
+
+
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id="work"
+        className="scroll-mt-24"
       >
         <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
         <div className="flex flex-col space-y-2">
@@ -233,6 +240,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id="technologies"
+        className="scroll-mt-24"
       >
         <h3 className="mb-5 text-lg font-medium">Technologies</h3>
         <div className="flex cursor-default flex-wrap items-center justify-start gap-y-3 space-x-3">
@@ -494,6 +503,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id="education"
+        className="scroll-mt-24"
       >
         <h3 className="mb-5 text-lg font-medium">Education</h3>
         <div className="flex flex-col space-y-2">
@@ -568,6 +579,39 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id="projects"
+        className="scroll-mt-24"
+      >
+        <h3 className="mb-5 text-lg font-medium">Side Projects</h3>
+        <div className="grid grid-cols-1 gap-x-6 gap-y-15 sm:grid-cols-2">
+          {PROJECTS.map((project) => (
+            <div key={project.name} className="space-y-2">
+              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                <ProjectVideo src={project.video} />
+              </div>
+              <div className="px-1">
+                <a
+                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  href={project.link}
+                  target="_blank"
+                >
+                  {project.name}
+                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
+                </a>
+                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                  {project.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+        id="connect"
+        className="scroll-mt-24"
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">

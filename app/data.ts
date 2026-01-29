@@ -75,6 +75,23 @@ export const PROJECTS: Project[] = [
   },
 ]
 
+export const WEBSITE_DESIGN: Project[] = [
+  {
+    name: 'Placeholder Project 1',
+    description: 'A brief description of this design project.',
+    link: '#',
+    video: 'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412759/tj_jd0zqz.mp4', // Reusing video for now
+    id: 'design1',
+  },
+  {
+    name: 'Placeholder Project 2',
+    description: 'Another great design project description.',
+    link: '#',
+    video: 'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412759/tj_jd0zqz.mp4', // Reusing video for now
+    id: 'design2',
+  },
+]
+
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'GSA Global',

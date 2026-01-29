@@ -1,9 +1,17 @@
 'use client'
-import { TextEffect } from '@/components/ui/text-effect'
-import Link from 'next/link'
+import React from 'react'
+import { AnimatedBackground } from '@/components/ui/animated-background'
 import { motion } from 'motion/react'
 
-const MotionLink = motion(Link)
+const VARIANTS_CONTAINER = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
 
 const VARIANTS_SECTION = {
   hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
@@ -14,47 +22,57 @@ const TRANSITION_SECTION = {
   duration: 0.3,
 }
 
+const NAV_ITEMS = [
+  { label: 'Design', id: 'design' },
+  { label: 'Work', id: 'work' },
+  { label: 'Technologies', id: 'technologies' },
+  { label: 'Education', id: 'education' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Connect', id: 'connect' },
+]
+
 export function Header() {
+  const handleScroll = (id: string) => {
+    const el = document.getElementById(id)
+    if (!el) return
+
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
+
   return (
-    <header className="mb-8 flex items-center gap-4">
-      <motion.div
-        className="h-[64px] w-[64px] overflow-hidden rounded-full"
+    <motion.header variants={VARIANTS_CONTAINER}
+      initial="hidden"
+      animate="visible"
+      className="top-4 z-50 mb-12 hidden w-full justify-center py-4 md:flex">
+    <motion.nav
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
-        initial="hidden"
-        animate="visible"
-        whileHover={{
-          scale: 1.07,
-          transition: { type: 'tween', duration: 0.1 },
-        }}
+        className="flex gap-[3px]"
       >
-        <img
-          src="/profile-pic.png"
-          alt="Henry Prosser"
-          className="h-full w-full object-cover"
-        />
-      </motion.div>
-      <div>
-        <MotionLink
-          href="/"
-          className="font-medium text-black dark:text-white"
-          variants={VARIANTS_SECTION}
-          transition={TRANSITION_SECTION}
-          initial="hidden"
-          animate="visible"
+        <AnimatedBackground
+          className="rounded-lg bg-zinc-100 dark:bg-zinc-800"
+          transition={{
+            type: 'spring',
+            bounce: 0.2,
+            duration: 0.3,
+          }}
+          enableHover
         >
-          Henry Prosser
-        </MotionLink>
-        <TextEffect
-          as="p"
-          preset="fade"
-          per="char"
-          className="text-zinc-600 dark:text-zinc-500"
-          delay={0.5}
-        >
-          Software Developer
-        </TextEffect>
-      </div>
-    </header>
+          {NAV_ITEMS.map((item) => (
+            <button
+              key={item.label}
+              data-id={item.label}
+              onClick={() => handleScroll(item.id)}
+              className="cursor-pointer inline-flex px-3 py-1.5 text-sm font-normal text-zinc-500 transition-colors duration-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {item.label}
+            </button>
+          ))}
+        </AnimatedBackground>
+      </motion.nav>
+    </motion.header>
   )
 }

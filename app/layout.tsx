@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
+import { Profile } from './profile'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
               <Header />
+              <Profile />
               {children}
               <Footer />
             </div>
