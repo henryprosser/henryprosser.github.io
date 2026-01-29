@@ -2,7 +2,8 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  video?: string
+  image?: string
   id: string
 }
 
@@ -72,6 +73,37 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/dkksgwa2t/video/upload/v1757412759/tj_jd0zqz.mp4',
     id: 'project4',
+  },
+]
+
+export const WEBSITE_DESIGN: Project[] = [
+  {
+    name: 'Infinity',
+    description: 'Infinity SaaS',
+    link: 'https://infinity-khaki.vercel.app', 
+    image: 'https://res.cloudinary.com/dkksgwa2t/image/upload/v1769701658/Infinity_yxfmfs.png',
+    id: 'design1',
+  },
+  {
+    name: 'Onyx Architects',
+    description: 'Onyx Architects',
+    link: 'https://onyx-architects.vercel.app/',
+    image: 'https://res.cloudinary.com/dkksgwa2t/image/upload/v1769701471/Onyx_np3fkc.png',
+    id: 'design2',
+  },
+  {
+    name: 'Ethereal Glow',
+    description: 'Ethereal Glow Spa',
+    link: 'https://ethereal-glow.vercel.app/',
+    image: 'https://res.cloudinary.com/dkksgwa2t/image/upload/v1769701468/EtherealGlow_s2seid.png',
+    id: 'design3',
+  },
+  {
+    name: 'Amber & Roast',
+    description: 'Amber & Roast Coffee',
+    link: 'https://amber-roast.vercel.app/',
+    image: 'https://res.cloudinary.com/dkksgwa2t/image/upload/v1769701470/Amber_Roast_vhahs6.png',
+    id: 'design4',
   },
 ]
 
