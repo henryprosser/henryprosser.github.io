@@ -81,7 +81,7 @@ export const WEBSITE_DESIGN: Project[] = [
     name: 'Infinity',
     description: 'Infinity SaaS',
     link: 'https://infinity-khaki.vercel.app', 
-    image: 'https://res.cloudinary.com/dkksgwa2t/image/upload/v1769707949/Infinity_mlhzwx.webp',
+    image: 'https://res.cloudinary.com/dkksgwa2t/image/upload/v1769708512/Infinity_mlhzwx.webp',
     id: 'design1',
   },
   {
